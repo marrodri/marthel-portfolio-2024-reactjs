@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Intro from "./intro";
 import Spotlight from "../components/spotlight";
+import Card from "../components/card";
 ///Children: ${Children.JSX}
 export default function Wrapper() {
   return (
@@ -28,45 +29,16 @@ export default function Wrapper() {
       {/* spotlight: experience and portfolio */}
       <Spotlight color="bg-yellow-400">
         <h1 className="font-bold py-5">Experience and Portfolio</h1>
-        <div>
-          <section className="flex flex-col bg-purple-400 border-black border-2 border-solid rounded-t-md">
-            <div>Icon</div>
-            <br />
-            <div>SFMLPokedex, November 2024</div>
-            <div>
-              A school project where I have developed an encyclopedia game where
-              it shows information about pokemon.
-            </div>
-            <div>learn more</div>
-          </section>
-          <section className="flex flex-col bg-purple-400 border-black border-2 border-solid ">
-            <div>Icon</div>
-            <br />
-            <div>SFMLPokedex, November 2024</div>
-            <div>
-              A school project where I have developed an encyclopedia game where
-              it shows information about pokemon.
-            </div>
-            <div>learn more</div>
-          </section>
-          <section className="flex flex-col bg-purple-400 border-black border-2 border-solid rounded-b-md">
-            <div>Icon</div>
-            <br />
-            <div>SFMLPokedex, November 2024</div>
-            <div>
-              A school project where I have developed an encyclopedia game where
-              it shows information about pokemon.
-            </div>
-            <div>learn more</div>
-          </section>
+        <div className="flex flex-col space-y-2">
+          <Card />
+          <Card />
+          <Card />
         </div>
       </Spotlight>
       {/* form: about get in touch */}
       <Spotlight color="bg-green-400">
-      <h1 className="font-bold">Get in touch with.</h1>
-        <p>
-          Looking to get in touch with me. I'm looking forward
-        </p>
+        <h1 className="font-bold">Get in touch with.</h1>
+        <p>Looking to get in touch with me. I'm looking forward</p>
       </Spotlight>
     </main>
   );
